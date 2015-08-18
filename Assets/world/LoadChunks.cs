@@ -68,7 +68,7 @@ public class LoadChunks : MonoBehaviour
             Mathf.FloorToInt(transform.position.x / Chunk.chunkSize) * Chunk.chunkSize,
             Mathf.FloorToInt(transform.position.y / Chunk.chunkSize) * Chunk.chunkSize,
             Mathf.FloorToInt(transform.position.z / Chunk.chunkSize) * Chunk.chunkSize
-            );
+        );
 
         //If there aren't already chunks to generate
         if (updateList.Count == 0)
@@ -81,11 +81,10 @@ public class LoadChunks : MonoBehaviour
                     chunkPositions[i].x * Chunk.chunkSize + playerPos.x,
                     0,
                     chunkPositions[i].z * Chunk.chunkSize + playerPos.z
-                    );
+            	);
 
                 //Get the chunk in the defined position
-                Chunk newChunk = world.GetChunk(
-                    newChunkPos.x, newChunkPos.y, newChunkPos.z);
+                Chunk newChunk = world.GetChunk(newChunkPos.x, newChunkPos.y, newChunkPos.z);
 
                 //If the chunk already exists and it's already
                 //rendered or in queue to be rendered continue
@@ -142,7 +141,6 @@ public class LoadChunks : MonoBehaviour
 
     bool DeleteChunks()
     {
-
         if (timer == 10)
         {
             var chunksToDelete = new List<WorldPos>();

@@ -6,8 +6,7 @@ using System;
 public class BlockGrass : Block
 {
 
-    public BlockGrass()
-        : base()
+    public BlockGrass() : base()
     {
 
     }

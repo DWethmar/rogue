@@ -4,7 +4,6 @@ using SimplexNoise;
 
 public class TerrainGen
 {
-
     float stoneBaseHeight = -24;
     float stoneBaseNoise = 0.05f;
     float stoneBaseNoiseHeight = 4;

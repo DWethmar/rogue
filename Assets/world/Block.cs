@@ -17,10 +17,8 @@ public class Block
 
     }
 
-    public virtual MeshData Blockdata
-     (Chunk chunk, int x, int y, int z, MeshData meshData)
+    public virtual MeshData Blockdata(Chunk chunk, int x, int y, int z, MeshData meshData)
     {
-
         meshData.useRenderDataForCol = true;
 
         if (!chunk.GetBlock(x, y + 1, z).IsSolid(Direction.down))
@@ -54,11 +52,9 @@ public class Block
         }
 
         return meshData;
-
     }
 
-    protected virtual MeshData FaceDataUp
-        (Chunk chunk, int x, int y, int z, MeshData meshData)
+    protected virtual MeshData FaceDataUp(Chunk chunk, int x, int y, int z, MeshData meshData)
     {
         meshData.AddVertex(new Vector3(x - 0.5f, y + 0.5f, z + 0.5f));
         meshData.AddVertex(new Vector3(x + 0.5f, y + 0.5f, z + 0.5f));
@@ -70,8 +66,7 @@ public class Block
         return meshData;
     }
 
-    protected virtual MeshData FaceDataDown
-        (Chunk chunk, int x, int y, int z, MeshData meshData)
+    protected virtual MeshData FaceDataDown(Chunk chunk, int x, int y, int z, MeshData meshData)
     {
         meshData.AddVertex(new Vector3(x - 0.5f, y - 0.5f, z - 0.5f));
         meshData.AddVertex(new Vector3(x + 0.5f, y - 0.5f, z - 0.5f));
@@ -83,8 +78,7 @@ public class Block
         return meshData;
     }
 
-    protected virtual MeshData FaceDataNorth
-        (Chunk chunk, int x, int y, int z, MeshData meshData)
+    protected virtual MeshData FaceDataNorth(Chunk chunk, int x, int y, int z, MeshData meshData)
     {
         meshData.AddVertex(new Vector3(x + 0.5f, y - 0.5f, z + 0.5f));
         meshData.AddVertex(new Vector3(x + 0.5f, y + 0.5f, z + 0.5f));
@@ -96,8 +90,7 @@ public class Block
         return meshData;
     }
 
-    protected virtual MeshData FaceDataEast
-        (Chunk chunk, int x, int y, int z, MeshData meshData)
+    protected virtual MeshData FaceDataEast(Chunk chunk, int x, int y, int z, MeshData meshData)
     {
         meshData.AddVertex(new Vector3(x + 0.5f, y - 0.5f, z - 0.5f));
         meshData.AddVertex(new Vector3(x + 0.5f, y + 0.5f, z - 0.5f));
@@ -109,8 +102,7 @@ public class Block
         return meshData;
     }
 
-    protected virtual MeshData FaceDataSouth
-        (Chunk chunk, int x, int y, int z, MeshData meshData)
+    protected virtual MeshData FaceDataSouth(Chunk chunk, int x, int y, int z, MeshData meshData)
     {
         meshData.AddVertex(new Vector3(x - 0.5f, y - 0.5f, z - 0.5f));
         meshData.AddVertex(new Vector3(x - 0.5f, y + 0.5f, z - 0.5f));
@@ -122,8 +114,7 @@ public class Block
         return meshData;
     }
 
-    protected virtual MeshData FaceDataWest
-        (Chunk chunk, int x, int y, int z, MeshData meshData)
+    protected virtual MeshData FaceDataWest(Chunk chunk, int x, int y, int z, MeshData meshData)
     {
         meshData.AddVertex(new Vector3(x - 0.5f, y - 0.5f, z + 0.5f));
         meshData.AddVertex(new Vector3(x - 0.5f, y + 0.5f, z + 0.5f));
